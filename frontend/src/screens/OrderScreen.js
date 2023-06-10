@@ -187,7 +187,9 @@ export default function OrderScreen() {
                           alt={item.name}
                           className="img-fluid rounded img-thumbnail"
                         ></img>{' '}
-                        <a href={`/product/${item.slug}`}>{item.name}</a>
+                        <a className="agray" href={`/product/${item.slug}`}>
+                          {item.name}
+                        </a>
                       </Col>
                       <Col md={3}>
                         <span>{item.quantity}</span>
