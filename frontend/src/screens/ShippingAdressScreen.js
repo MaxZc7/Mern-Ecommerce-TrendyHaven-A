@@ -50,6 +50,10 @@ function ShippingAdressScreen() {
     );
   };
 
+  const ejctu = () => {
+    window.location.href = '/payment';
+  };
+
   return (
     <div>
       <Helmet>
@@ -101,11 +105,7 @@ function ShippingAdressScreen() {
             />
           </Form.Group>
           <div className="mb-3">
-            <Button
-              variant="primary"
-              type="submit"
-              onClick={(window.location.href = '/payment')}
-            >
+            <Button variant="primary" type="submit" onSubmit={ejctu()}>
               Continue
             </Button>
           </div>
