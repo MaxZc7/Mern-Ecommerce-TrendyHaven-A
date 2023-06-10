@@ -105,7 +105,7 @@ export default function OrderScreen() {
     };
 
     if (!userInfo) {
-      return navigate('/login');
+      return navigate('/signin');
     }
     if (!order._id || successPay || (order._id && order._id !== orderId)) {
       fetchOrder();
