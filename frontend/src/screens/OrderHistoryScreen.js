@@ -83,7 +83,9 @@ export default function OrderHistoryScreen() {
                 </td>
                 <td>
                   <Button type="button" variant="light">
-                    <a href={`/order/${order._id}`}> Details</a>
+                    <a className="ablue" href={`/order/${order._id}`}>
+                      Details
+                    </a>
                   </Button>
                 </td>
               </tr>

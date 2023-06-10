@@ -64,7 +64,9 @@ function PaymentMethodScreen() {
             />
           </div>
           <div className="mb-3">
-            <Button type="submit">Submit</Button>
+            <Button type="submit">
+              <a href="/placeorder">Submit</a>
+            </Button>
           </div>
         </Form>
       </div>

@@ -44,6 +44,7 @@ function PlaceOrderScreen() {
   cart.shippingPrice = cart.itemsPrice > 100 ? round2(0) : round2(10);
   cart.taxPrice = round2(0.21 * cart.itemsPrice);
   cart.totalPrice = cart.itemsPrice + cart.taxPrice + cart.shippingPrice;
+
   const placeOrderHandler = async () => {
     try {
       dispatch({
@@ -69,7 +70,7 @@ function PlaceOrderScreen() {
       ctxDispatch({ type: 'CART_CLEAR' });
       dispatch({ type: 'CREATE_SUCCESS' });
       localStorage.removeItem('cartItems');
-      navigate(`/order/${data.order._id}`);
+      window.location.href = `/order/${data.order._id}`;
     } catch (err) {
       dispatch({ type: 'CREATE_FAIL' });
       toast.error(getError(err));

@@ -61,7 +61,16 @@ main {
 }
 
 a {
+  color: #fff;
   text-decoration: none;
+}
+
+.ablue {
+  color: rgb(58, 117, 255);
+}
+
+a:hover {
+  color: #fff;
 }
 
 .container-strong {
@@ -73,11 +82,4 @@ a {
 .strong-dropdown {
   text-decoration: none;
   color: #a0a0a0;
-}
-
-.whi {
-  color: #fff;
-}
-.whi:hover {
-  color: #fff;
 }
