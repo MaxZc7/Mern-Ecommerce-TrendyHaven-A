@@ -59,3 +59,18 @@ main {
   border-bottom: 0.2rem solid #f08000;
   color: #f08000;
 }
+
+a {
+  text-decoration: none;
+}
+
+.container-strong {
+  display: flex;
+  flex-direction: column;
+  margin: 4px;
+}
+
+.strong-dropdown {
+  text-decoration: none;
+  color: #a0a0a0;
+}

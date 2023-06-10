@@ -40,9 +40,9 @@ function App() {
         <header>
           <Navbar bg="dark" variant="dark" expand="lg">
             <Container>
-              <LinkContainer to="/">
+              <a href="/">
                 <Navbar.Brand>Trendy Haven</Navbar.Brand>
-              </LinkContainer>
+              </a>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto w-100 justify-content-end">
@@ -56,12 +56,18 @@ function App() {
                   </a>
                   {userInfo ? (
                     <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
-                      <LinkContainer to="/profile">
-                        <NavDropdown.Item>User Profile</NavDropdown.Item>
-                      </LinkContainer>
-                      <LinkContainer to="/orderhistory">
-                        <NavDropdown.Item>Order History</NavDropdown.Item>
-                      </LinkContainer>
+                      <container className="container-strong">
+                        <a href="/profile">
+                          <strong className="strong-dropdown">
+                            User Profile
+                          </strong>
+                        </a>
+                        <a href="/orderhistory">
+                          <strong className="strong-dropdown">
+                            Order History
+                          </strong>
+                        </a>
+                      </container>
                       <NavDropdown.Divider />
                       <a
                         className="dropdown-item"
