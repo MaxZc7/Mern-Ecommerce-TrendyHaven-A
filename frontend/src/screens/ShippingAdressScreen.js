@@ -101,12 +101,12 @@ function ShippingAdressScreen() {
             />
           </Form.Group>
           <div className="mb-3">
-            <Button variant="primary" type="submit">
-              <input onSubmit={submitHandler}>
-                <button type="submit">
-                  <a href="/payment">Continue</a>
-                </button>
-              </input>{' '}
+            <Button
+              variant="primary"
+              type="submit"
+              onClick={(window.location.href = '/payment')}
+            >
+              Continue
             </Button>
           </div>
         </Form>
