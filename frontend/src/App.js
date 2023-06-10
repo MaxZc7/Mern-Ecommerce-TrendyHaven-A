@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import HomeScreen from './screens/HomeScreen';
@@ -44,16 +44,16 @@ function App() {
                 <Navbar.Brand>Trendy Haven</Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav/">
+              <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto w-100 justify-content-end">
-                  <Link to="/cart" className="nav-link">
+                  <a href="/cart" className="nav-link">
                     Cart
                     {cart.cartItems.length > 0 && (
                       <Badge pill bg="danger">
                         {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
                       </Badge>
                     )}
-                  </Link>
+                  </a>
                   {userInfo ? (
                     <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
                       <LinkContainer to="/profile">
@@ -63,18 +63,18 @@ function App() {
                         <NavDropdown.Item>Order History</NavDropdown.Item>
                       </LinkContainer>
                       <NavDropdown.Divider />
-                      <Link
+                      <a
                         className="dropdown-item"
-                        to="#signout"
+                        href="#signout"
                         onClick={signoutHandler}
                       >
                         Sign Out
-                      </Link>
+                      </a>
                     </NavDropdown>
                   ) : (
-                    <Link className="nav-link" to="/signin">
+                    <a className="nav-link" href="/signin">
                       Sign In
-                    </Link>
+                    </a>
                   )}
                 </Nav>
               </Navbar.Collapse>

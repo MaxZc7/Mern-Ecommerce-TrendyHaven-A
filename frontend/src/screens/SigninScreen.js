@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import { Helmet } from 'react-helmet-async';
@@ -70,7 +70,7 @@ function SigninScreen() {
         </div>
         <div className="mb-3">
           New customer?{' '}
-          <Link to={`/signup?redirect=${redirect}`}>Create your account</Link>
+          <a href={`/signup?redirect=${redirect}`}>Create your account</a>
         </div>
       </Form>
     </Container>

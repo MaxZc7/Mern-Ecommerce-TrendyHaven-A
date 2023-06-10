@@ -9,7 +9,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { toast } from 'react-toastify';
 import { getError } from '../utils';
 import { Store } from '../store';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Axios from 'axios';
 import LoadingBox from '../Components/LoadingBox';
 
@@ -100,7 +100,7 @@ function PlaceOrderScreen() {
                 {cart.shippingAddress.city}, {cart.shippingAddress.postalCode},{' '}
                 {cart.shippingAddress.country}
               </Card.Text>
-              <Link to="/shipping">Edit</Link>
+              <a href="/shipping">Edit</a>
             </Card.Body>
           </Card>
 
@@ -111,7 +111,7 @@ function PlaceOrderScreen() {
                 <strong>Method:</strong>
                 {cart.paymentMethod}
               </Card.Text>
-              <Link to="/payment">Edit</Link>
+              <a href="/payment">Edit</a>
             </Card.Body>
           </Card>
 
@@ -129,7 +129,7 @@ function PlaceOrderScreen() {
                           className="img-fluid rounded 
                         img-thumbnail"
                         ></img>
-                        <Link to={`/product/${item.slug}`}>{item.name}</Link>
+                        <a href={`/product/${item.slug}`}>{item.name}</a>
                       </Col>
                       <Col md={3}>
                         <span>{item.quantity}</span>
@@ -139,7 +139,7 @@ function PlaceOrderScreen() {
                   </ListGroup.Item>
                 ))}
               </ListGroup>
-              <Link to="/cart">Edit</Link>
+              <a href="/cart">Edit</a>
             </Card.Body>
           </Card>
         </Col>

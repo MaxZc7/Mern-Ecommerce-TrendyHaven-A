@@ -3,7 +3,7 @@ import { Store } from '../store';
 import { Helmet } from 'react-helmet-async';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import ListGroup from 'react-bootstrap/ListGroup';
 import MessageBox from '../Components/MessageBox';
 import Button from 'react-bootstrap/Button';
@@ -48,7 +48,7 @@ export default function CartScreen() {
         <Col md={8}>
           {cartItems.length === 0 ? (
             <MessageBox>
-              Cart is empty. <Link to="/">Go Shopping</Link>
+              Cart is empty. <a href="/">Go Shopping</a>
             </MessageBox>
           ) : (
             <ListGroup>
@@ -62,7 +62,7 @@ export default function CartScreen() {
                         className="img-fluid rounded img-thumbnail"
                       ></img>
                       {''}
-                      <Link to={`/product/${item.slug}`}>{item.name}</Link>
+                      <a href={`/product/${item.slug}`}>{item.name}</a>
                     </Col>
                     <Col md={3}>
                       <Button

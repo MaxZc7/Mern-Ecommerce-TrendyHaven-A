@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Rating from './Rating';
@@ -28,13 +27,13 @@ function Product(props) {
   };
   return (
     <Card className="product">
-      <Link to={`/product/${product.slug}`}>
+      <a href={`/product/${product.slug}`}>
         <img src={product.image} alt={product.name} />
-      </Link>
+      </a>
       <Card.Body>
-        <Link to={`/product/${product.slug}`}>
+        <a href={`/product/${product.slug}`}>
           <Card.Title>{product.name}</Card.Title>
-        </Link>
+        </a>
         <Rating
           rating={product.rating}
           numReviews={product.numReviews}

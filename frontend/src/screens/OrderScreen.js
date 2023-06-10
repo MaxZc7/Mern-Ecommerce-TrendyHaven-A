@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useReducer } from 'react';
 import LoadingBox from '../Components/LoadingBox';
 import MessageBox from '../Components/MessageBox';
 import { Store } from '../store';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { getError } from '../utils';
 import { Helmet } from 'react-helmet-async';
@@ -187,7 +187,7 @@ export default function OrderScreen() {
                           alt={item.name}
                           className="img-fluid rounded img-thumbnail"
                         ></img>{' '}
-                        <Link to={`/product/${item.slug}`}>{item.name}</Link>
+                        <a href={`/product/${item.slug}`}>{item.name}</a>
                       </Col>
                       <Col md={3}>
                         <span>{item.quantity}</span>
