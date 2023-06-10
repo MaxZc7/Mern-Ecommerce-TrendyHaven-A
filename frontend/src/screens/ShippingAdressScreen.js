@@ -48,9 +48,6 @@ function ShippingAdressScreen() {
         country,
       })
     );
-  };
-
-  const ejctu = () => {
     window.location.href = '/payment';
   };
 
@@ -105,7 +102,7 @@ function ShippingAdressScreen() {
             />
           </Form.Group>
           <div className="mb-3">
-            <Button variant="primary" type="submit" onSubmit={ejctu()}>
+            <Button variant="primary" type="submit">
               Continue
             </Button>
           </div>
