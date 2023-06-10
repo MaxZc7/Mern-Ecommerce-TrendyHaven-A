@@ -42,7 +42,10 @@ export default function CartScreen() {
         <Col md={8}>
           {cartItems.length === 0 ? (
             <MessageBox>
-              Cart is empty. <a href="/">Go Shopping</a>
+              Cart is empty.{' '}
+              <a className="agray" href="/">
+                Go Shopping
+              </a>
             </MessageBox>
           ) : (
             <ListGroup>
@@ -56,7 +59,9 @@ export default function CartScreen() {
                         className="img-fluid rounded img-thumbnail"
                       ></img>
                       {''}
-                      <a href={`/product/${item.slug}`}>{item.name}</a>
+                      <a className="agray" href={`/product/${item.slug}`}>
+                        {item.name}
+                      </a>
                     </Col>
                     <Col md={3}>
                       <Button
@@ -112,7 +117,7 @@ export default function CartScreen() {
                       type="button"
                       disabled={cartItems.length === 0}
                     >
-                      <a className="whi" href={'/shipping'}>
+                      <a className="whi" href="/shipping">
                         Proceed to Checkout
                       </a>
                     </Button>

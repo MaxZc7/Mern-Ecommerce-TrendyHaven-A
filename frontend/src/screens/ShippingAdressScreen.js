@@ -48,7 +48,6 @@ function ShippingAdressScreen() {
         country,
       })
     );
-    navigate('/payment');
   };
 
   return (

@@ -101,7 +101,9 @@ function PlaceOrderScreen() {
                 {cart.shippingAddress.city}, {cart.shippingAddress.postalCode},{' '}
                 {cart.shippingAddress.country}
               </Card.Text>
-              <a href="/shipping">Edit</a>
+              <a className="ablue" href="/shipping">
+                Edit
+              </a>
             </Card.Body>
           </Card>
 
@@ -112,7 +114,9 @@ function PlaceOrderScreen() {
                 <strong>Method:</strong>
                 {cart.paymentMethod}
               </Card.Text>
-              <a href="/payment">Edit</a>
+              <a className="ablue" href="/payment">
+                Edit
+              </a>
             </Card.Body>
           </Card>
 
@@ -130,7 +134,9 @@ function PlaceOrderScreen() {
                           className="img-fluid rounded 
                         img-thumbnail"
                         ></img>
-                        <a href={`/product/${item.slug}`}>{item.name}</a>
+                        <a className="agray" href={`/product/${item.slug}`}>
+                          {item.name}
+                        </a>
                       </Col>
                       <Col md={3}>
                         <span>{item.quantity}</span>

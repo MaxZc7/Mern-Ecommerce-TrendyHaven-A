@@ -68,6 +68,16 @@ a {
 .ablue {
   color: rgb(58, 117, 255);
 }
+.ablue:hover {
+  color: rgb(58, 117, 255);
+}
+
+.agray {
+  color: #404040;
+}
+.agray:hover {
+  color: #404040;
+}
 
 a:hover {
   color: #fff;
