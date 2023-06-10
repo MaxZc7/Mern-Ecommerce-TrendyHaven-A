@@ -112,7 +112,7 @@ export default function CartScreen() {
                       type="button"
                       disabled={cartItems.length === 0}
                     >
-                      <a className="whi" href={'/signin?redirect=/shipping'}>
+                      <a className="whi" href={'/shipping'}>
                         Proceed to Checkout
                       </a>
                     </Button>
