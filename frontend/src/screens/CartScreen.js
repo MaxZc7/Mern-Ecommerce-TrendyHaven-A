@@ -3,7 +3,6 @@ import { Store } from '../store';
 import { Helmet } from 'react-helmet-async';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { useNavigate } from 'react-router-dom';
 import ListGroup from 'react-bootstrap/ListGroup';
 import MessageBox from '../Components/MessageBox';
 import Button from 'react-bootstrap/Button';
@@ -12,7 +11,6 @@ import Card from 'react-bootstrap/Card';
 import axios from 'axios';
 
 export default function CartScreen() {
-  const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const {
     cart: { cartItems },
@@ -32,10 +30,6 @@ export default function CartScreen() {
 
   const removeItemHandler = (item) => {
     ctxDispatch({ type: 'CART_REMOVE_ITEM', payload: item });
-  };
-
-  const checkoutHandler = () => {
-    navigate('/signin?redirect=/shipping');
   };
 
   return (
@@ -116,10 +110,11 @@ export default function CartScreen() {
                     <Button
                       variant="primary"
                       type="button"
-                      onClick={checkoutHandler}
                       disabled={cartItems.length === 0}
                     >
-                      Proceed to Checkout
+                      <a className="whi" href={'/signin?redirect=/shipping'}>
+                        Proceed to Checkout
+                      </a>
                     </Button>
                   </div>
                 </ListGroup.Item>

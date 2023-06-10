@@ -5,7 +5,6 @@ import MessageBox from '../Components/MessageBox';
 import { Store } from '../store';
 import axios from 'axios';
 import { getError } from '../utils';
-import { useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 
 const reducer = (state, action) => {
@@ -22,7 +21,6 @@ const reducer = (state, action) => {
 };
 
 export default function OrderHistoryScreen() {
-  const navigate = useNavigate();
   const { state } = useContext(Store);
   const { userInfo } = state;
 
