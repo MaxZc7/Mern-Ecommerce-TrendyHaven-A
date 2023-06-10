@@ -102,7 +102,9 @@ function ShippingAdressScreen() {
           </Form.Group>
           <div className="mb-3">
             <Button variant="primary" type="submit">
-              <a href="/payment">Continue</a>
+              <a href="/payment" type="submit">
+                Continue
+              </a>
             </Button>
           </div>
         </Form>
